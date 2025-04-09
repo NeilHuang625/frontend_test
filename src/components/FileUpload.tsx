@@ -122,6 +122,7 @@ const FileUpload: React.FC = () => {
           accept="application/pdf,image/*"
           onChange={handleFileChange}
           className="hidden"
+          title="Upload a file"
         />
       </div>
 
