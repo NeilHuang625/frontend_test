@@ -23,11 +23,12 @@ const TaskList: React.FC<Props> = ({ tasks, onCancel }) => {
             <div className="font-medium">{task.filename}</div>
             <div className="text-sm text-gray-600">
               Status: {task.status}
-              {task.retries > 0 && (
-                <span className="text-yellow-500 ml-2">
-                  (Retry {task.retries})
-                </span>
-              )}
+              {["pending", "processing"].includes(task.status) &&
+                task.retries > 0 && (
+                  <span className="text-yellow-500 ml-2">
+                    (Retry {task.retries})
+                  </span>
+                )}
             </div>
           </div>
           {["pending", "processing"].includes(task.status) && (

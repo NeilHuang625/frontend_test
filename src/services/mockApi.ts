@@ -39,8 +39,8 @@ export function getTaskStatus(taskId: string): Promise<{ status: TaskStatus }> {
     if (!mockTasks[taskId]) {
       reject(new Error("Task not found"));
     } else {
-      // Random chance of network failure
-      if (Math.random() < 1) {
+      // Random chance of network failure. 90% likely to succeed
+      if (Math.random() < 0.1) {
         reject(new Error("Network error"));
       } else {
         const status = mockTasks[taskId].status;

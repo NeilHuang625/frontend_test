@@ -9,7 +9,6 @@ export const usePolling = (
   const pollingRefs = useRef<Record<string, number>>({});
   const tasksRef = useRef<Task[]>(tasks);
 
-  // 💡 让最新 tasks 始终同步到 ref 中
   useEffect(() => {
     tasksRef.current = tasks;
   }, [tasks]);
