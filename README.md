@@ -6,7 +6,7 @@ Reflection Questions
 I used a custom mock implementation based on setTimeout and in-memory storage. This gave me full control over task timing, cancellation, and error simulation without relying on external resources.
 
 ## 2. If you used an AI tool, what parts did it help with?
-I used AI assistance for architectural suggestions, but I designed and implemented the core logic including polling, retry control.
+UI polishing, some logic or design idea like how to desgin retry mechanism, but I designed and implemented the core logic including polling, retry control.
 
 ## 3. What tradeoffs or shortcuts did you take?
 I chose to use custom hooks and native state to keep the project easy to understand in a short time frame, also just focus on the task's core logic.
